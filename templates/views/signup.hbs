@@ -1,0 +1,38 @@
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style2.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script> -->
+  {{>header}}
+
+</head>
+
+<div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+
+            <!-- Icon -->
+            <div class="fadeIn first">
+                <h2> sign up form </h2>
+            </div>
+
+            <!-- Login Form -->
+
+            <form method="post" action="/register_user">
+            
+                <input type="text" id="username " class="fadeIn second" name="username" placeholder="Enter Username ">
+                <input type="text" id="password" class="fadeIn third" name="password" placeholder="Enter password">
+                <input type="submit" class="fadeIn fourth" value="Sign up" id="btn_submit">
+
+            </form>
+
+            <!-- Remind Passowrd -->
+            <div id="formFooter">
+                <a class="underlineHover" href="/">Log in </a>
+            </div>
+
+        </div>
+    </div>

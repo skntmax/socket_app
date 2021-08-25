@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div class="page-content page-container" id="page-content">
+        <div class="padding">
+            <div class="row container d-flex justify-content-center">
+                <div class="col-md-6">
+                    <div class="card card-bordered">
+                        <div class="card-header">
+                            <h4 class="card-title"><strong id="u_name">{{u_name}}</strong></h4> <a class="btn btn-xs btn-secondary" href="#" data-abc="true">Let's Chat App</a>
+                        </div>
+                        <div class="ps-container ps-theme-default ps-active-y" id="chat-content" style="overflow-y: scroll !important; height:400px !important;">
+
+                            <!-- 
+                            <div class="media media-meta-day">Today</div>
+                            <div class="media media-chat media-chat-reverse">
+                                <div class="media-body">
+
+                                    <p>Long time no see! Tomorrow office. will be free on sunday.</p>
+                                    <p class="meta"><time datetime="2018">00:06</time></p>
+                                </div>
+                            </div> -->
+
+
+                            <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;" id="users_msg">
+                                <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                            </div>
+                            <div class="ps-scrollbar-y-rail" style="top: 0px; height: 0px; right: 2px;">
+                                <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 2px;"></div>
+                            </div>
+                        </div>
+                        <div class="publisher bt-1 border-light"> <img class="avatar avatar-xs" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="...">
+
+                            <input class="publisher-input" type="text" placeholder="Write something" id="text_area"> <span class="publisher-btn file-group">
+                    <i class="fa fa-paperclip file-browser"></i> <input type="file"> </span>
+                            <a class="publisher-btn" href="#" data-abc="true">
+                                <i class="fa fa-smile"></i></a>
+                            <a class="publisher-btn text-info" href="#" data-abc="true">
+                                <i class="fa fa-paper-plane" id="btn_submit"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chatbox_script.js"></script>
+
+</body>
+
+</html>
