@@ -1,19 +1,13 @@
 let socket = io();
 
-
 let text_area = document.getElementById('text_area');
 let send = document.getElementById('btn_submit');
 let u_name = document.getElementById('u_name');
 send.addEventListener('click', (e) => {
     e.preventDefault();
     let msg = text_area.value;
-    // actual_user_msg(msg);
-    // other_users_message(msg);
-    // post_msg(msg);
     text_area.value = "";
     broadcat_msg(msg);
-    // append_msg();
-    // append_other_users_msg();
 
 });
 
@@ -25,10 +19,11 @@ document.getElementById('text_area').addEventListener("keyup", function(event) {
     }
 })
 
+var datetime;
 
 function actual_user_msg(msg, c_user = "default") {
     var currentdate = new Date();
-    var datetime = currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds();
+    datetime = currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds();
     let users_div = document.createElement('div');
     users_div.classList.add('media', 'media-chat', 'media-chat-reverse');
     users_div.setAttribute('id', 'pointer');
@@ -50,7 +45,7 @@ function other_users_message(msg, c_user = "default") {
     <img class="avatar" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="...">
     <div class="media-body">
      
-    <p>  <span><h5 style=" font-weight: bold;"> ${c_user} </h5> </span> ${msg}</p>
+    <p>  <span style=" font-weight: bold;"> ${c_user} </span> ${msg} </p>
 
 </div>`;
 
